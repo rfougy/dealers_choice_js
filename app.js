@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 
 //Retrieving Specific Brand Page...
 app.get('/:id', (req, res) => {
-  const id = req.params.id;
+  const id = parseInt(req.params.id) - 1;
   const brandInfo = data[id];
   res.send(brandPage(brandInfo));
 });

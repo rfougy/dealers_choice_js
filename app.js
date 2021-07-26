@@ -13,8 +13,7 @@ app.get('/', (req, res) => {
 //Retrieving Specific Brand Page...
 app.get('/:id', (req, res) => {
   const id = req.params.id;
-  const brandInfo = data[0];
-  console.log(brandInfo);
+  const brandInfo = data[id];
   res.send(brandPage(brandInfo));
 });
 
